@@ -1,0 +1,7 @@
+
+ª"squid:ClassVariableVisibilityCheck5"WMake dateCreated a static final constant or non-public and provide accessors if needed.(ÀÉ”Æÿÿÿÿÿ8ªòÑâí-HˆRMINORZVULNERABILITY
+ª"squid:ClassVariableVisibilityCheck"WMake detectionOn a static final constant or non-public and provide accessors if needed.(ŠÁ•ùÿÿÿÿ8¸´Ü®ï-H‰RMINORZVULNERABILITY
+ "squid:ClassVariableVisibilityCheck8"RMake status a static final constant or non-public and provide accessors if needed.(œ©²ÿ8ªòÑâí-HŠRMINORZVULNERABILITY
+¤"squid:ClassVariableVisibilityCheck6"VMake fixVersion a static final constant or non-public and provide accessors if needed.(ß¼É8ªòÑâí-H‹RMINORZVULNERABILITY
+¢"squid:ClassVariableVisibilityCheck"OMake key a static final constant or non-public and provide accessors if needed.(·¢¼Òüÿÿÿÿ8ªòÑâí-HŒRMINORZVULNERABILITY
+¨"squid:ClassVariableVisibilityCheck7"UMake createdBy a static final constant or non-public and provide accessors if needed.(ù¥‹ûúÿÿÿÿ8ªòÑâí-HRMINORZVULNERABILITY

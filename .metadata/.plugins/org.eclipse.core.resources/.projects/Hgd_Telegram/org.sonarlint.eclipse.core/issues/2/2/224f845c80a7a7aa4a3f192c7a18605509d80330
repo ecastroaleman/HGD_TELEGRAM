@@ -1,0 +1,7 @@
+
+{squid:S00112?"FDefine and throw a dedicated exception instead of using a generic one.(±µ‡²8Ì„×áí-HŸRMAJORZ
+CODE_SMELL
+nsquid:S11411"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ýÛÞáí-H RMAJORZ
+CODE_SMELL
+“squid:S1149,"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8• §áí-H¡RMAJORZ
+CODE_SMELL

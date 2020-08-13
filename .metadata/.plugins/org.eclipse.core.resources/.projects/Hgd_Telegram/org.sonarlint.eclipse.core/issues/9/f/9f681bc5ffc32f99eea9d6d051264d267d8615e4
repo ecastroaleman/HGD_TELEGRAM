@@ -1,0 +1,7 @@
+
+{squid:S00112z"FDefine and throw a dedicated exception instead of using a generic one.(şüÜ¨8‚õ÷êí-HµRMAJORZ
+CODE_SMELL
+©squid:S1319B"pThe type of the "datos" object should be an interface such as "List" rather than the implementation "ArrayList".(â¾²ëúÿÿÿÿ8äãšãí-H¶RMINORZ
+CODE_SMELL
+squid:S1319z"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(şüÜ¨H·RMINORZ
+CODE_SMELL
