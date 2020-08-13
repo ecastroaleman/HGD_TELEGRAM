@@ -1,8 +1,5 @@
 package com.ericsson.hgd;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Tickets {
 	private String detectionOn;
 	public String getDetectionOn() {
@@ -66,12 +63,5 @@ public class Tickets {
 	public void setTicket(Tickets tk) {
 		this.ticket = tk;
 	}
-	
-	 private Set<Tickets> tkk = new HashSet<Tickets>();      
-
-	  public Set<Tickets> getEmployees() {                       
-	    return tkk;
-	  }
-
 
 }

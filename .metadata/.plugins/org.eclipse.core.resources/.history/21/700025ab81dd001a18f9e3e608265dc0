@@ -82,8 +82,8 @@ public class Inicial {
 							
 					for (int j=0; j < teams.length;j++) {
 					  msg1 = msg.toString().replace("#TEAM#", teams[j]);
-					  //lg.info(teams[j]);
-					  determinarEquipo(msg1);
+					  lg.info(teams[j]);
+					  //determinarEquipo(msg1);
 					 
 				    }
 			  }
@@ -109,7 +109,9 @@ public class Inicial {
 				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioFro());	
 			}else if (pmsg.contains("CDR")) {
 				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioCdR());	
-			}
+			}//else {
+				//retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvio());			
+			//}
 			 
 			 
 		 }catch (UnsupportedEncodingException e) {

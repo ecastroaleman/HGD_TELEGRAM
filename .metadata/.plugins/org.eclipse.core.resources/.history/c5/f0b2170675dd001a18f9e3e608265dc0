@@ -6,7 +6,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 import org.apache.log4j.Logger;
 import org.codehaus.jettison.json.JSONException;
@@ -35,19 +34,22 @@ public class Inicial {
 			
 		lg.info("Creando Conexión a Jira...");
 		JiraRestClient connJira = getclienteJira();
-		lg.info("Obteniendo Tickets...");	
+			
 		ArrayList<Tickets> totalTickets = obtenerTickets(connJira);
+	
 		
 		lg.info("Total Tickets obtenidos ... "+totalTickets.size());
 			
 		
-		iteraTickets(totalTickets);
+		iteraTickes(totalTickets);
+		
+		
 	
-		connJira.close();
+			connJira.close();
 		} catch (IOException e) {
 			lg.error(e.getMessage(),e);
-			SendMsg smsge = new SendMsg();
-			smsge.sendToTelegram(URLEncoder.encode("ERROR : "+e.getMessage(), ENCODING),ApplicationProperties.INSTANCE.chatEnvio());	
+			 SendMsg smsge = new SendMsg();
+				smsge.sendToTelegram(URLEncoder.encode("ERROR : "+e.getMessage(), ENCODING),"PERSONAL");
 		}
 		
 		
@@ -57,7 +59,7 @@ public class Inicial {
 		
 	}
 	
-	public static void iteraTickets( ArrayList<Tickets> datos) throws UnsupportedEncodingException{
+	public static void iteraTickes( ArrayList<Tickets> datos) throws UnsupportedEncodingException{
 	  
 	    StringBuilder msg = new StringBuilder();
 		for (int i=0; i<datos.size(); i++) {
@@ -70,45 +72,47 @@ public class Inicial {
 			    msg.append("\nPara el Equipo : #TEAM# ");
 			    msg.append("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
 			    
-			  String[] teams = datos.get(i).getFixVersion().split("-");
-			 
+			   String[] teams = datos.get(i).getFixVersion().split("-");
+			  
 			  String msg1 = "";
 			  if (teams.length == 1) {
 				 	 
-				  msg1 = msg.toString().replaceFirst("#TEAM#", teams[0]);			
-				  determinarEquipo(msg1);
+				  msg1 = msg.toString().replaceFirst("#TEAM#", teams[0].toString());
+				
+				 provideTeam(msg1);
 				  
 			  }else {
 							
 					for (int j=0; j < teams.length;j++) {
-					  msg1 = msg.toString().replace("#TEAM#", teams[j]);
-					  //lg.info(teams[j]);
-					  determinarEquipo(msg1);
+					  msg1 = msg.toString().replace("#TEAM#", teams[j].toString() );
+					  provideTeam(msg1);
 					 
 				    }
 			  }
 			   			
-		   
+		    lg.info(msg.toString());
 			msg = new StringBuilder();
 		}
 	  
 	}
 	
-	public static String determinarEquipo(String pmsg) throws UnsupportedEncodingException {
+	public static String provideTeam(String pmsg) throws UnsupportedEncodingException {
 		
 		 SendMsg smsg = new SendMsg();
 		 String retorno = "";
 		 
 		 try {
-			lg.info("Enviando Mensaje : "+pmsg);
-			if (pmsg.contains("Asignacion")) {						
-					retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioAsig());
+			 
+			 if (pmsg.contains("Asignacion")) {						
+					retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg.toString(), ENCODING),ApplicationProperties.INSTANCE.chatEnvioAsig());
 			}else if (pmsg.contains("Entrada")) {
-				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioEnt());		
+				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg.toString(), ENCODING),ApplicationProperties.INSTANCE.chatEnvioEnt());		
 			}else if (pmsg.contains("Frontales")) {
-				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioFro());	
+				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg.toString(), ENCODING),ApplicationProperties.INSTANCE.chatEnvioFro());	
 			}else if (pmsg.contains("CDR")) {
-				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioCdR());	
+				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg.toString(), ENCODING),ApplicationProperties.INSTANCE.chatEnvioCdR());	
+			}else {
+				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg.toString(), ENCODING),ApplicationProperties.INSTANCE.chatEnvio());			
 			}
 			 
 			 
@@ -132,10 +136,11 @@ public class Inicial {
 		return client;
 		
 	}
-	public static String obtenerJQL(JiraRestClient pconnJira) throws InterruptedException, ExecutionException {
+	
+	public static String obtenerJQL(JiraRestClient pconnJira) throws Exception {
 		String filterID =  ApplicationProperties.INSTANCE.getFilterID();
 		Promise<Filter> fjql = pconnJira.getSearchClient().getFilter(Long.parseLong(filterID));
-		String jql = fjql.get().getJql();
+		String jql = fjql.get().getJql().toString();
 		lg.info(jql);		
 		return jql;
 	}
@@ -176,15 +181,12 @@ public class Inicial {
 	            }            	
 	            	
 	            Iterable<Version> fv = issue.getFixVersions();
-	            int t = 0;	
-	            for (Version ver:fv) { 
 	            	
-	            if (!ver.getName().equals("Defectos ATLAS")) {
-	            	if (t == 0) {versiones.append(ver.getName());}
-	            	else {versiones.append("-"+ver.getName());}
-	            		t++;
-	            }
-	            }       
+	            	for (Version ver:fv) {
+	            		versiones.append(ver.getName() +"-");
+	            		
+	            	}
+	            	        
 	            tic.setCreatedBy(originador);
 	            tic.setDetectionOn(detectionOn);
 	            tic.setFixVersion(versiones.toString());

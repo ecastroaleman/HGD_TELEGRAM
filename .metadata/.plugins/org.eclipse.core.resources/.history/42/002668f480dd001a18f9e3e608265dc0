@@ -71,7 +71,7 @@ public class Inicial {
 			    msg.append("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
 			    
 			  String[] teams = datos.get(i).getFixVersion().split("-");
-			 
+			  lg.info(datos.get(i).getFixVersion());
 			  String msg1 = "";
 			  if (teams.length == 1) {
 				 	 
@@ -82,8 +82,8 @@ public class Inicial {
 							
 					for (int j=0; j < teams.length;j++) {
 					  msg1 = msg.toString().replace("#TEAM#", teams[j]);
-					  //lg.info(teams[j]);
-					  determinarEquipo(msg1);
+					  lg.info(teams[j]);
+					  //determinarEquipo(msg1);
 					 
 				    }
 			  }
@@ -109,7 +109,9 @@ public class Inicial {
 				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioFro());	
 			}else if (pmsg.contains("CDR")) {
 				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioCdR());	
-			}
+			}//else {
+				//retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvio());			
+			//}
 			 
 			 
 		 }catch (UnsupportedEncodingException e) {
@@ -176,15 +178,14 @@ public class Inicial {
 	            }            	
 	            	
 	            Iterable<Version> fv = issue.getFixVersions();
-	            int t = 0;	
-	            for (Version ver:fv) { 
 	            	
-	            if (!ver.getName().equals("Defectos ATLAS")) {
-	            	if (t == 0) {versiones.append(ver.getName());}
-	            	else {versiones.append("-"+ver.getName());}
-	            		t++;
-	            }
-	            }       
+	            	for (Version ver:fv) {
+	            		lg.info(ver.getId());
+	            		lg.info(ver.hashCode());
+	            		versiones.append(ver.getName() +"-");
+	            		
+	            	}
+	            	        
 	            tic.setCreatedBy(originador);
 	            tic.setDetectionOn(detectionOn);
 	            tic.setFixVersion(versiones.toString());

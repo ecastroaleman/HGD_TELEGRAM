@@ -3964,3 +3964,119 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2020-08-12 19:44:17,944 [Worker-462] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-08-12 19:44:17,944 [Worker-462] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
 2020-08-12 19:44:17,944 [Worker-462] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-12 19:44:17,944 [Worker-462] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:33:09,060 [Worker-684] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:33:09,060 [Worker-684] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:33:09,061 [Worker-684] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:33:09,061 [Worker-684] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:33:22,904 [Worker-685] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:33:22,904 [Worker-685] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:33:22,905 [Worker-685] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:33:22,905 [Worker-685] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:35:02,100 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:35:02,100 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:35:02,101 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:35:02,101 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:35:23,095 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:35:23,095 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:35:23,095 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:35:23,095 [Worker-679] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:43:02,013 [Worker-688] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:43:02,013 [Worker-688] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:43:02,014 [Worker-688] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:43:02,014 [Worker-688] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:51:37,383 [Worker-676] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:51:37,383 [Worker-676] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:51:37,384 [Worker-676] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:51:37,384 [Worker-676] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 08:55:27,438 [Worker-693] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:55:27,439 [Worker-693] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 08:55:27,439 [Worker-693] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 08:55:27,439 [Worker-693] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:05:27,036 [Worker-695] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:05:27,037 [Worker-695] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:05:27,037 [Worker-695] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:05:27,037 [Worker-695] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:07:08,475 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:07:08,475 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:07:08,476 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:07:08,476 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:07:52,964 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:07:52,965 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:07:52,965 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:07:52,965 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:41:44,584 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:41:44,584 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:41:44,585 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:41:44,585 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:42:03,043 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:42:03,043 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:42:03,044 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:42:03,044 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:44:03,190 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:44:03,190 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:44:03,191 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:44:03,191 [Worker-706] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:47:30,973 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:47:30,973 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:47:30,974 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:47:30,974 [Worker-698] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:51:14,088 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:51:14,088 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:51:14,089 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:51:14,089 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:52:16,691 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:52:16,691 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:52:16,692 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:52:16,692 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:52:23,908 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:52:23,908 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:52:23,908 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:52:23,908 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:57:09,811 [Worker-714] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:57:09,811 [Worker-714] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:57:09,812 [Worker-714] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:57:09,812 [Worker-714] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 09:58:32,338 [Worker-715] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:58:32,339 [Worker-715] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 09:58:32,339 [Worker-715] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 09:58:32,339 [Worker-715] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:01:41,131 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:01:41,131 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:01:41,131 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:01:41,132 [Worker-710] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:02:09,825 [Worker-720] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:02:09,826 [Worker-720] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:02:09,826 [Worker-720] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:02:09,826 [Worker-720] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:03:41,734 [Worker-717] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:03:41,734 [Worker-717] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:03:41,735 [Worker-717] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:03:41,735 [Worker-717] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:06:26,217 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:06:26,217 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:06:26,217 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:06:26,218 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:07:26,193 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:07:26,193 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:07:26,194 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:07:26,194 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:10:12,345 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:10:12,345 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:10:12,346 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:10:12,346 [Worker-721] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:20:51,708 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:20:51,708 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:20:51,709 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:20:51,709 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:22:04,029 [Worker-735] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:22:04,029 [Worker-735] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:22:04,030 [Worker-735] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:22:04,031 [Worker-735] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:22:55,945 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:22:55,945 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:22:55,946 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:22:55,946 [Worker-730] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\test\resources
+2020-08-13 10:25:58,287 [Worker-739] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-13 10:25:58,287 [Worker-739] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Proyectos\HGD_TELEGRAM\Hgd_Telegram\src\main\resources
+2020-08-13 10:25:58,287 [Worker-739] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

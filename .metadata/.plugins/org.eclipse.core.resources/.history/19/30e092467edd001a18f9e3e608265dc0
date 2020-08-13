@@ -35,7 +35,7 @@ public class SendMsg {
         envio3.append(ptexto);
         
         try {
-        	
+        	lg.info("Enviando Mensaje : "+ptexto);
             URL url = new URL(envio3.toString());
             URLConnection conn = url.openConnection();
             InputStream is = new BufferedInputStream(conn.getInputStream());

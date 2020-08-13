@@ -58,7 +58,6 @@ public class SendMsg {
         }
         
         envio3 = new StringBuilder();
-        lg.info("Respuesta Envío: "+resp);
         return resp;
     }
     
