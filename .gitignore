@@ -2,3 +2,4 @@
 /.recommenders/
 /.sonarlint/
 /RemoteSystemsTempFiles/
+/.metadata/*
