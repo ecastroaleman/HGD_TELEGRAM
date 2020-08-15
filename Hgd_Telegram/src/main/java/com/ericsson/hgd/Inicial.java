@@ -5,8 +5,15 @@ import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 import org.apache.log4j.Logger;
 import org.codehaus.jettison.json.JSONException;
@@ -30,7 +37,7 @@ public class Inicial {
 	    static int totRegistros=0;
 	    public static final Logger lg = Logger.getLogger(Inicial.class);
 	    
-	    public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 		try {
 			
 		lg.info("Creando Conexión a Jira...");
@@ -57,7 +64,7 @@ public class Inicial {
 		
 	}
 	
-	public static void iteraTickets( ArrayList<Tickets> datos) throws UnsupportedEncodingException{
+	public static void iteraTickets( ArrayList<Tickets> datos) throws UnsupportedEncodingException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException{
 	  
 	    StringBuilder msg = new StringBuilder();
 		for (int i=0; i<datos.size(); i++) {
@@ -65,10 +72,11 @@ public class Inicial {
 			    msg.append("\nAtender el Ticket: "+datos.get(i).getKey());   
 			    msg.append("\nCreado el      : "+datos.get(i).getDateCreated());
 			    msg.append("\nCreador por   : "+datos.get(i).getCreatedBy());
+			    msg.append("\nPrioridad        : "+datos.get(i).getPriority());
 			    msg.append("\nStatus Actual  : "+datos.get(i).getStatus());
 			    msg.append("\nDetectado en  : "+datos.get(i).getDetectionOn());
 			    msg.append("\nPara el Equipo : #TEAM# ");
-			    msg.append("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+			    msg.append("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
 			    
 			  String[] teams = datos.get(i).getFixVersion().split("-");
 			 
@@ -82,7 +90,6 @@ public class Inicial {
 							
 					for (int j=0; j < teams.length;j++) {
 					  msg1 = msg.toString().replace("#TEAM#", teams[j]);
-					  //lg.info(teams[j]);
 					  determinarEquipo(msg1);
 					 
 				    }
@@ -94,14 +101,14 @@ public class Inicial {
 	  
 	}
 	
-	public static String determinarEquipo(String pmsg) throws UnsupportedEncodingException {
+	public static String determinarEquipo(String pmsg) throws UnsupportedEncodingException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		
 		 SendMsg smsg = new SendMsg();
 		 String retorno = "";
 		 
 		 try {
 			lg.info("Enviando Mensaje : "+pmsg);
-			if (pmsg.contains("Asignacion")) {						
+			if (pmsg.contains("Asignacion") || pmsg.contains("Nuevo Asignador")) {						
 					retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioAsig());
 			}else if (pmsg.contains("Entrada")) {
 				retorno = 	smsg.sendToTelegram(URLEncoder.encode(pmsg, ENCODING),ApplicationProperties.INSTANCE.chatEnvioEnt());		
@@ -121,13 +128,13 @@ public class Inicial {
 		
 		return retorno;
 	}
-	public static JiraRestClient getclienteJira () throws URISyntaxException {
+	public static JiraRestClient getclienteJira () throws URISyntaxException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
 		 JiraRestClient client = null;
 		 
 			 URI uri = new URI(JIRA_URL);	  
 			
-			 client = factory.createWithBasicHttpAuthentication(uri, JIRA_ADMIN_USERNAME, JIRA_ADMIN_PASSWORD);
+			 client = factory.createWithBasicHttpAuthentication(uri, JIRA_ADMIN_USERNAME, Security.decrypt("LNFDESAATLAS",JIRA_ADMIN_PASSWORD));
 		
 		return client;
 		
@@ -140,7 +147,7 @@ public class Inicial {
 		return jql;
 	}
 
-	public static ArrayList<Tickets> obtenerTickets(JiraRestClient pconnJira ) throws Exception {
+	public static ArrayList<Tickets> obtenerTickets(JiraRestClient pconnJira ) throws InterruptedException, ExecutionException  {
 	  ArrayList<Tickets> grupoTic = new ArrayList<Tickets>();
 	 		
 	  Promise<SearchResult> searchJqlPromise = pconnJira.getSearchClient().searchJql(obtenerJQL(pconnJira));
@@ -154,7 +161,7 @@ public class Inicial {
 			    tic.setDateCreated(issue.getCreationDate().toString("dd/MM/yyyy HH:mm"));
 	            tic.setKey(issue.getKey());
 	            tic.setStatus(issue.getStatus().getName());
-	            
+	            tic.setPriority(issue.getPriority().getName());
 	            
 	            try {
 					JSONObject creador = new JSONObject(issue.getFieldByName("Creator").getValue().toString());
@@ -176,15 +183,27 @@ public class Inicial {
 	            }            	
 	            	
 	            Iterable<Version> fv = issue.getFixVersions();
-	            int t = 0;	
-	            for (Version ver:fv) { 
-	            	
-	            if (!ver.getName().equals("Defectos ATLAS")) {
-	            	if (t == 0) {versiones.append(ver.getName());}
-	            	else {versiones.append("-"+ver.getName());}
-	            		t++;
+	            
+	            Iterator<Version> it = fv.iterator();
+	            
+	            
+	            while(it.hasNext()) {
+	                Version element = it.next();
+	             	                
+	                if (!element.getName().equals("Defectos ATLAS")) {
+	                	
+	                if (  (versiones.toString().contains("Nuevo Asignador") && element.getName().equals("Defectos Asignacion"))
+	                  ||  (versiones.toString().contains("Defectos Asignacion") && element.getName().equals("Defectos Nuevo Asignador"))
+	                		) {lg.info("La Etiqueta Asignación está duplicada.");}
+	                else {  
+	                   
+	                  if (it.hasNext()) {versiones.append(element.getName()+"-");}
+	                  else {versiones.append(element.getName());}
+	                }
+	                
+	                }
 	            }
-	            }       
+	            	
 	            tic.setCreatedBy(originador);
 	            tic.setDetectionOn(detectionOn);
 	            tic.setFixVersion(versiones.toString());

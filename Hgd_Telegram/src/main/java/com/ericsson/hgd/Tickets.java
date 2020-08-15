@@ -4,6 +4,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Tickets {
+	private String priority;
+	public String getPriority() {
+		return priority;
+	}
+
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
 	private String detectionOn;
 	public String getDetectionOn() {
 		return detectionOn;

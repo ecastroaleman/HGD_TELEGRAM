@@ -8,6 +8,12 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 import org.apache.log4j.Logger;
 import org.codehaus.jettison.json.JSONException;
@@ -24,11 +30,11 @@ public class SendMsg {
     public static final Logger lg = Logger.getLogger(SendMsg.class);
     
  	
-    public String sendToTelegram(String ptexto, String pChat) {
+    public String sendToTelegram(String ptexto, String pChat) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
     	String resp = "OK";
         StringBuilder envio3 = new StringBuilder();
         envio3.append(ApplicationProperties.INSTANCE.urlTelegram());
-        envio3.append(APITOKEN);
+        envio3.append(Security.decrypt("LNFDESAATLAS",APITOKEN));
         envio3.append("/sendMessage?chat_id=");
         envio3.append(pChat);
         envio3.append("&text=");
